@@ -1,0 +1,10 @@
+Sales and Inventory Summary (2025-09-09):
+- Total Revenue: ₱7,320.00
+- Top Selling Product: perfume
+- Low Stock Alerts:
+- chair: 1 units
+- charger: 1 units
+- RGB LIGHTS: 1 units
+- bag: 4 units
+- socket: 4 units
+- AIRCON: 9 units

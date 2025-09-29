@@ -1,0 +1,83 @@
+.sidebar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    min-height: 100vh;
+}
+
+.sidebar-link {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.sidebar-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transform: translateX(5px);
+}
+
+.sidebar-link.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+body {
+    background: #f4f6f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.sidebar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    z-index: 1000;
+    transition: width 0.3s;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 100%; /* Ensure it doesn't exceed screen width */
+    padding: 0 15px; /* Add padding for smaller screens */
+}
+
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 0; /* Hide sidebar on small screens */
+        min-width: 0;
+        overflow-x: hidden;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+    .card {
+        width: 100% !important; /* Ensure cards don't stretch */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 15px;
+    }
+    .row > [class^="col-"] {
+        flex: 0 0 100%; /* Full width on small screens */
+        max-width: 100%;
+    }
+}
+
+/* Prevent stretching on zoom */
+.card, .card-header, .stats-card {
+    width: 100%;
+    box-sizing: border-box;
+}
